@@ -32,8 +32,8 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'; // 
 // Font Awesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faUsers, faHeartbeat, faHandsHelping, faBrain, faComments, faPalette,
-    faCameraRetro, faVideo, faLaptopCode, faCalculator, faUtensils, faBookOpen,
+    faUsers, faHeartbeat, faHandsHelping, faBrain, faPalette,
+     faLaptopCode, faCalculator, faBookOpen,
     faChalkboardTeacher, faGraduationCap, faBriefcase, faMountain, faPencilAlt,
     faFlag, faMusic, faDumbbell, faQuestionCircle, faSpa, faSchool
 } from '@fortawesome/free-solid-svg-icons';
