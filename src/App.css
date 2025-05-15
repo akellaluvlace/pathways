@@ -1,0 +1,32 @@
+/* src/App.css */
+body {
+  font-family: 'Fira Code', monospace; /* Stylish monospace font */
+  margin: 0;
+  padding: 0;
+  background-color: '#f5f5f5';
+  color: '#333';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: '#1976d2';
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+a {
+  color: inherit;
+}
+
+/* Optional: If 'Fira Code' is not available, you might want to include it via CDN or install it.
+   For a quick start, you can try a commonly available monospace font like 'Courier New', monospace;
+   If you want to use 'Fira Code' properly, you might need to include it in your index.html from Google Fonts or similar. */
