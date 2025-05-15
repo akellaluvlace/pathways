@@ -316,8 +316,8 @@ function Home() {
                         <Typography variant="h6" sx={{ fontWeight: 'medium', color: theme.palette.primary.dark }}>Opening Hours</Typography>
                     </Box>
                     <List dense sx={{pl: 1}}>
-                        <ListItem disablePadding sx={{pb: 0.5}}><ListItemText primary="Monday: 10:00 am - 4:00 pm" /></ListItem>
-                        <ListItem disablePadding sx={{pb: 0.5}}><ListItemText primary="Tuesday - Thursday: 10:00 am - 6:00 pm" /></ListItem>
+                        <ListItem disablePadding sx={{pb: 0.5}}><ListItemText primary="Monday: 9:00 am - 4:00 pm" /></ListItem>
+                        <ListItem disablePadding sx={{pb: 0.5}}><ListItemText primary="Tuesday - Thursday: 9:00 am - 6:00 pm" /></ListItem>
                         <ListItem disablePadding><ListItemText primary="Friday: 11:00 am - 4:00 pm" /></ListItem>
                     </List>
                 </Paper>
@@ -376,7 +376,7 @@ function Home() {
                 <Typography variant="h2" component="h2">{allDisplayTitles[orderedSectionKeys[5]]}</Typography>
                 <Typography variant="body1" color="text.secondary" paragraph sx={{ fontStyle: 'italic', textAlign: 'center', mt: -1, mb: 3 }}>If you are currently in prison and approaching release, here’s how to connect with The Pathways Centre:</Typography>
                 <List dense={false} sx={{ '& .MuiListItem-root': { py: 1 }}}>
-                    <ListItem><ListItemIcon><ForwardToInboxIcon color="action" sx={{ fontSize: '2rem' }} /></ListItemIcon><ListItemText primary={<>Contact staff in the <strong>Education Unit</strong>.</>} primaryTypographyProps={{ variant: 'body1' }}/></ListItem>
+                    <ListItem><ListItemIcon><ForwardToInboxIcon color="action" sx={{ fontSize: '2rem' }} /></ListItemIcon><ListItemText primary={<>Contact staff in the <strong>Education Centre</strong>.</>} primaryTypographyProps={{ variant: 'body1' }}/></ListItem>
                     <ListItem><ListItemIcon><AssignmentIndIcon color="action" sx={{ fontSize: '2rem' }} /></ListItemIcon><ListItemText primary={<>Reach out through <strong>pre-release courses</strong>, the <strong>Integrated Sentence Management (I.S.M.) officer</strong>, or the <strong>Training & Employment officer</strong> for referral.</>} primaryTypographyProps={{ variant: 'body1' }}/></ListItem>
                     <ListItem><ListItemIcon><ConnectWithoutContactIcon color="action" sx={{ fontSize: '2rem' }} /></ListItemIcon><ListItemText primary="If suitable, a staff worker from The Pathways Centre will arrange to visit you in prison." primaryTypographyProps={{ variant: 'body1' }}/></ListItem>
                 </List>
@@ -456,7 +456,7 @@ function Home() {
                 <Typography variant="h2" component="h2">{allDisplayTitles[orderedSectionKeys[7]]}</Typography>
                 <Grid container spacing={3} sx={{ mt: 2 }}>
                     {[
-                        { name: "Joe", quote: "Ilove Pathways, I've been coming here years. I grew here as a person." },
+                        { name: "Joe", quote: "I love Pathways, I've been coming here years. I grew here as a person." },
                         { name: "Lisa", quote: "I think Pathways is an amazing programme which gives you an opportunity to upskill in different areas and provides loads of educational and emotional support." },
                         { name: "James", quote: "The staff are really friendly, very patient and great at helping you with your assignments and getting into college." },
                         { name: "Aaron", quote: "It's good to have a safe place to come to after getting out of jail, I like the routine and the different courses you can do." }
