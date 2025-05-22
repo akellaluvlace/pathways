@@ -1,7 +1,7 @@
 // src/pages/Home.js
 import React, { useState } from 'react';
 import {
-    Container, Grid, CardContent, Typography, Box, List, ListItem, ListItemIcon, ListItemText, alpha, useTheme, Paper, Link
+    Container, Grid, CardContent, Typography, Box, List, ListItem, ListItemIcon, ListItemText, alpha, useTheme, Paper, Link, Tooltip
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -27,7 +27,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import ScheduleIcon from '@mui/icons-material/Schedule';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'; // <-- ADDED IMPORT
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 // Font Awesome Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -38,11 +38,11 @@ import {
     faFlag, faMusic, faDumbbell, faQuestionCircle, faSpa, faSchool
 } from '@fortawesome/free-solid-svg-icons';
 
-import sponsorLogo1 from '../assets/images/1000079142.png';
-import sponsorLogo2 from '../assets/images/both full colour.png';
-import sponsorLogo3 from '../assets/images/Rialtas_Mark_Std_Colour.png';
-import sponsorLogo4 from '../assets/images/SOLAS logo super high res transparent (2).png';
-import cdetbLogo from '../assets/images/cdetb_logos_cmyk-01.png';
+import sponsorLogo1 from '../assets/images/1000079142.png'; // City of Dublin FET College, Pathways Centre
+import sponsorLogo2 from '../assets/images/both full colour.png'; // EU Flag
+import sponsorLogo3 from '../assets/images/Rialtas_Mark_Std_Colour.png'; // Government of Ireland
+import sponsorLogo4 from '../assets/images/SOLAS logo super high res transparent (2).png'; // SOLAS
+import cdetbLogo from '../assets/images/cdetb_logos_cmyk-01.png'; // City of Dublin ETB
 
 import logoImage from '../assets/images/copypathways.png';
 import logoHoverImage from '../assets/images/copypathways222.PNG';
@@ -67,10 +67,38 @@ const allDisplayTitles = {
 };
 
 const sponsorLogosData = [
-    { src: sponsorLogo1, alt: 'Sponsor Logo 1 - CDETB' }, { src: sponsorLogo2, alt: 'Sponsor Logo 2 - ESF & EU' },
-    { src: sponsorLogo3, alt: 'Sponsor Logo 3 - Rialtas na hEireann' }, { src: sponsorLogo4, alt: 'Sponsor Logo 4 - SOLAS' },
-    { src: cdetbLogo, alt: 'City of Dublin ETB Logo' },
+    {
+        src: sponsorLogo1,
+        alt: 'City of Dublin FET College - Pathways Centre',
+        tooltipText: "The Pathways Centre is an outreach initiative of the City of Dublin Education and Training Board's (CDETB) Education Service to Prisons. It offers respite, information, education, counselling, and support for former prisoners.",
+        websiteUrl: 'https://www.pathwayscentre.ie/'
+    },
+    {
+        src: sponsorLogo2,
+        alt: 'Co-Funded by the European Union',
+        tooltipText: 'The European Union co-funds the Pathways Centre. The EU provides various funding programmes to support projects in areas like employment, social inclusion, education, and regional development.',
+        websiteUrl: 'https://european-union.europa.eu/live-work-study/funding-grants-subsidies_en'
+    },
+    {
+        src: sponsorLogo3,
+        alt: 'Government of Ireland',
+        tooltipText: 'The Government of Ireland co-funds the Pathways Centre. Gov.ie is the official portal for Irish government information and services.',
+        websiteUrl: 'https://www.gov.ie/'
+    },
+    {
+        src: sponsorLogo4,
+        alt: 'SOLAS - Learning Works',
+        tooltipText: "SOLAS is Ireland's Further Education and Training Authority. It is responsible for funding, planning, and co-ordinating Further Education and Training (FET) programmes.",
+        websiteUrl: 'https://www.solas.ie/'
+    },
+    {
+        src: cdetbLogo,
+        alt: 'City of Dublin Education and Training Board (CDETB)',
+        tooltipText: 'The City of Dublin Education and Training Board (CDETB) is the state education and training authority for Dublin city, providing a wide range of educational services. The Pathways Centre is one of its initiatives.',
+        websiteUrl: 'https://www.cityofdublinetb.ie/'
+    },
 ];
+
 
 const supportServicesData = [
     { text: "Study Skills", icon: faGraduationCap },
@@ -273,7 +301,7 @@ function Home() {
                                             >
                                                 <ListItem sx={{ py: 0.5, px: 0 }}>
                                                     <ListItemIcon sx={{ minWidth: 36, color: theme.palette.primary.main }}>
-                                                        <CheckCircleOutlineIcon sx={{ fontSize: '1.2rem' }} /> {/* <-- REPLACED BULLET WITH ICON */}
+                                                        <CheckCircleOutlineIcon sx={{ fontSize: '1.2rem' }} />
                                                     </ListItemIcon>
                                                     <ListItemText primary={item.text} primaryTypographyProps={{ variant: 'body1' }} />
                                                 </ListItem>
@@ -511,7 +539,7 @@ function Home() {
                 <Typography variant="body1" sx={{ textAlign: 'center', mb: 1, color: theme.palette.text.secondary }}>
                     The Pathways Centre is co-funded by the Government of Ireland and the European Union. {' '}
                     <Link 
-                        href="http://www.eufunds.ie" 
+                        href="https://www.eufunds.ie" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         sx={{
@@ -530,7 +558,7 @@ function Home() {
                     Click the link below to access the City of Dublin ETB website.
                     <br />
                     <Link 
-                        href="http://cityofdublin.etb.ie" 
+                        href="https://www.cityofdublinetb.ie" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         sx={{
@@ -540,29 +568,38 @@ function Home() {
                             wordBreak: 'break-all'
                         }}
                     >
-                        http://cityofdublin.etb.ie
+                        https://www.cityofdublinetb.ie
                     </Link>
                 </Typography>
                 <Grid container spacing={{xs: 3, sm: 4}} justifyContent="center" alignItems="center">
                     {sponsorLogosData.map((logo, index) => (
                         <Grid item xs={6} sm={4} md={2.4} key={index} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> 
-                            <Box 
-                                component="img" 
-                                src={logo.src} 
-                                alt={logo.alt} 
-                                sx={{ 
-                                    maxWidth: '100%', 
-                                    maxHeight: {xs: '50px', sm: '60px', md: '70px'}, 
-                                    width: 'auto', 
-                                    objectFit: 'contain', 
-                                    transition: 'transform 0.3s ease-in-out, opacity 0.3s', 
-                                    opacity: 0.9, 
-                                    '&:hover': { 
-                                        transform: 'scale(1.08)', 
-                                        opacity: 1,
-                                    } 
-                                }} 
-                            />
+                           <Tooltip title={logo.tooltipText} arrow>
+                                <Link 
+                                    href={logo.websiteUrl || `https://www.google.com/search?q=${encodeURIComponent(logo.alt)}`} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    sx={{ display: 'block', lineHeight: 0 }}
+                                >
+                                    <Box 
+                                        component="img" 
+                                        src={logo.src} 
+                                        alt={logo.alt} 
+                                        sx={{ 
+                                            maxWidth: '100%', 
+                                            maxHeight: {xs: '50px', sm: '60px', md: '70px'}, 
+                                            width: 'auto', 
+                                            objectFit: 'contain', 
+                                            transition: 'transform 0.3s ease-in-out, opacity 0.3s', 
+                                            opacity: 0.9, 
+                                            '&:hover': { 
+                                                transform: 'scale(1.08)', 
+                                                opacity: 1,
+                                            } 
+                                        }} 
+                                    />
+                                </Link>
+                            </Tooltip>
                         </Grid>
                     ))}
                 </Grid>
