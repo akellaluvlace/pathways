@@ -1,12 +1,10 @@
-# C:\Users\nikit\pathways\pathways_react\public\admin\config.yml
-
 backend:
-  name: git-gateway          # see step 2
-  branch: master               # or whatever Netlify builds
+  name: git-gateway
+  # Note: The instructions mention 'main' is common.
+  # Double-check that 'master' is the branch Netlify builds from.
+  branch: master
   site_domain: clever-longma-6b22c6.netlify.app
   base_url: https://api.netlify.com
-  
-# local_backend: true <-- This line has been removed.
 
 # This tells the CMS where to save uploaded images
 media_folder: "public/images/uploads"
@@ -19,6 +17,8 @@ collections:
     folder: "src/data/sponsors"
     create: true
     slug: "{{alt}}"
+    format: "json"        # <─ Added: Serialize as plain JSON
+    extension: "json"     # <─ Added: Use .json file extension
     fields:
       - { label: "Sponsor Name (for Alt Text)", name: "alt", widget: "string" }
       - { label: "Logo", name: "src", widget: "image" }
@@ -30,16 +30,19 @@ collections:
     folder: "src/data/testimonials"
     create: true
     slug: "{{name}}"
+    format: "json"        # <─ Added: Serialize as plain JSON
+    extension: "json"     # <─ Added: Use .json file extension
     fields:
       - { label: "Person's Name", name: "name", widget: "string" }
       - { label: "Quote", name: "quote", widget: "text" }
-  
-  # We combine all services into one collection for easier management
+
   - name: "services"
     label: "Classes & Services"
     folder: "src/data/services"
     create: true
     slug: "{{text}}"
+    format: "json"        # <─ Added: Serialize as plain JSON
+    extension: "json"     # <─ Added: Use .json file extension
     fields:
       - { label: "Service Name", name: "text", widget: "string" }
       - { label: "Icon (FontAwesome)", name: "icon", widget: "string", hint: "Example: faUsers, faHeartbeat, faPalette. See documentation for names." }
