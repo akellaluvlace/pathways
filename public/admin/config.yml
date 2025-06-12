@@ -25,16 +25,21 @@ collections:
       - { label: "Tooltip Text", name: "tooltipText", widget: "text" }
       - { label: "Website URL", name: "websiteUrl", widget: "string" }
 
-  - name: "testimonials"
+  - name:  "testimonials"
     label: "Testimonials"
-    folder: "src/data/testimonials"
-    create: true
-    slug: "{{name}}"
-    format: "json"        # <─ Added: Serialize as plain JSON
-    extension: "json"     # <─ Added: Use .json file extension
-    fields:
-      - { label: "Person's Name", name: "name", widget: "string" }
-      - { label: "Quote", name: "quote", widget: "text" }
+    files:
+      - file: "src/data/testimonials.json"
+        label: "Testimonials List"
+        name:  "list"
+        format: "json"
+        extension: "json"
+        fields:
+          - label: "Entries"
+            name:  "entries"
+            widget: "list"
+            fields:
+              - { label: "Person's Name", name: "name", widget: "string" }
+              - { label: "Quote",         name: "quote", widget: "text" }
 
   - name: "services"
     label: "Classes & Services"
