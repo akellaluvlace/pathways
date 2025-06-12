@@ -3,7 +3,7 @@
 backend:
   name: github
   repo: akellaluvlace/pathways 
-  branch: main 
+  branch: master 
   
 # local_backend: true <-- This line has been removed.
 
