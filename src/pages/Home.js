@@ -70,7 +70,7 @@ const sponsorLogosData = [
     {
         src: sponsorLogo1,
         alt: 'City of Dublin FET College - Pathways Centre',
-        tooltipText: "The Pathways Centre is an outreach initiative of the City of Dublin Education and Training Board's (CDETB) educational service to prisons. It offers respite, information, education, counselling, and support for former prisoners.",
+        tooltipText: "The Pathways Centre is an outreach initiative of the City of Dublin Education and Training Board's (CDETB) Educational Service to Prisons. It offers respite, information, education, counselling, and support for former prisoners.",
         websiteUrl: 'https://www.pathwayscentre.ie/'
     },
     {
@@ -237,7 +237,7 @@ function Home() {
           <Container maxWidth="md">
             <Typography variant="h2" component="h2">{allDisplayTitles[orderedSectionKeys[0]]}</Typography>
             <Typography variant="body1" paragraph sx={{ mb: 3, textAlign: 'justify' }}>
-                Founded in 1996, The Pathways Centre is an outreach initiative of the City of Dublin Education and Training Board (City of Dublin ETB) educational service to prisons. We offer a safe and understanding environment for former prisoners in the crucial period after release.
+                Founded in 1996, The Pathways Centre is an outreach initiative of the City of Dublin Education and Training Board (City of Dublin ETB)  Educational Service to Prisons. We offer a safe and understanding environment for former prisoners in the crucial period after release.
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'center', borderRadius: theme.shape.borderRadius, overflow: 'hidden', maxWidth: {xs: '100%', sm: '80%', md: '70%'}, margin: '0 auto', mb: 1, boxShadow: theme.shadows[6], transition: theme.transitions.create('box-shadow'), '&:hover': { boxShadow: theme.shadows[10], } }}>
                 <img src={pathwaysAboutImage} alt="Pathways Centre Building" style={{ display: 'block', maxWidth: '100%', height: 'auto' }} />

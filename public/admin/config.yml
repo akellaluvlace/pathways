@@ -1,0 +1,49 @@
+# C:\Users\nikit\pathways\pathways_react\public\admin\config.yml
+
+backend:
+  name: github
+  repo: akellaluvlace/pathways # CORRECTED: Removed the leading slash
+  branch: main # Or whatever your main branch is called
+  
+# This allows Netlify Identity to work with the CMS
+local_backend: true
+
+# This tells the CMS where to save uploaded images
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+# This defines all the editable content on your site
+collections:
+  - name: "sponsors"
+    label: "Sponsors"
+    folder: "src/data/sponsors"
+    create: true
+    slug: "{{alt}}"
+    fields:
+      - { label: "Sponsor Name (for Alt Text)", name: "alt", widget: "string" }
+      - { label: "Logo", name: "src", widget: "image" }
+      - { label: "Tooltip Text", name: "tooltipText", widget: "text" }
+      - { label: "Website URL", name: "websiteUrl", widget: "string" }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "src/data/testimonials"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - { label: "Person's Name", name: "name", widget: "string" }
+      - { label: "Quote", name: "quote", widget: "text" }
+  
+  # We combine all services into one collection for easier management
+  - name: "services"
+    label: "Classes & Services"
+    folder: "src/data/services"
+    create: true
+    slug: "{{text}}"
+    fields:
+      - { label: "Service Name", name: "text", widget: "string" }
+      - { label: "Icon (FontAwesome)", name: "icon", widget: "string", hint: "Example: faUsers, faHeartbeat, faPalette. See documentation for names." }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Support Service", "Educational Course", "QQI Module"]
