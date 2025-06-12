@@ -1,57 +1,52 @@
 backend:
   name: git-gateway
-  # Note: The instructions mention 'main' is common.
-  # Double-check that 'master' is the branch Netlify builds from.
   branch: master
   site_domain: clever-longma-6b22c6.netlify.app
   base_url: https://api.netlify.com
 
-# This tells the CMS where to save uploaded images
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
-# This defines all the editable content on your site
 collections:
+  # 1 — sponsors (unchanged) -----------------------------
   - name: "sponsors"
     label: "Sponsors"
     folder: "src/data/sponsors"
     create: true
     slug: "{{alt}}"
-    format: "json"        # <─ Added: Serialize as plain JSON
-    extension: "json"     # <─ Added: Use .json file extension
+    format: "json"
+    extension: "json"
     fields:
       - { label: "Sponsor Name (for Alt Text)", name: "alt", widget: "string" }
-      - { label: "Logo", name: "src", widget: "image" }
-      - { label: "Tooltip Text", name: "tooltipText", widget: "text" }
-      - { label: "Website URL", name: "websiteUrl", widget: "string" }
+      - { label: "Logo",           name: "src",          widget: "image" }
+      - { label: "Tooltip Text",   name: "tooltipText",  widget: "text" }
+      - { label: "Website URL",    name: "websiteUrl",   widget: "string" }
 
-  - name:  "testimonials"
-    label: "Testimonials"
+  # 2 — testimonials (fixed) -----------------------------
+  - label: "Testimonials"
+    name:  "testimonials"
     files:
       - file: "src/data/testimonials.json"
         label: "Testimonials List"
-        files:
-          - file: "src/data/testimonials.json"
-            label: "Testimonials List"
-            name:  "list"
-            format: "json"
-            extension: "json"
-            # root-level list (no extra object)
-            widget: "list"
-            fields:
-              - { label: "Person's Name", name: "name",  widget: "string" }
-              - { label: "Quote",         name: "quote", widget: "text" }
+        name:  "list"                 # REQUIRED
+        format: "json"
+        extension: "json"
+        widget: "list"                # root-level array
+        fields:
+          - { label: "Person's Name", name: "name",  widget: "string" }
+          - { label: "Quote",         name: "quote", widget: "text" }
 
+  # 3 — services (unchanged) -----------------------------
   - name: "services"
     label: "Classes & Services"
     folder: "src/data/services"
     create: true
     slug: "{{text}}"
-    format: "json"        # <─ Added: Serialize as plain JSON
-    extension: "json"     # <─ Added: Use .json file extension
+    format: "json"
+    extension: "json"
     fields:
       - { label: "Service Name", name: "text", widget: "string" }
-      - { label: "Icon (FontAwesome)", name: "icon", widget: "string", hint: "Example: faUsers, faHeartbeat, faPalette. See documentation for names." }
+      - { label: "Icon (FontAwesome)", name: "icon", widget: "string" }
       - label: "Category"
         name: "category"
         widget: "select"
