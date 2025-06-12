@@ -70,7 +70,7 @@ const sponsorLogosData = [
     {
         src: sponsorLogo1,
         alt: 'City of Dublin FET College - Pathways Centre',
-        tooltipText: "The Pathways Centre is an outreach initiative of the City of Dublin Education and Training Board's (CDETB) Education Service to Prisons. It offers respite, information, education, counselling, and support for former prisoners.",
+        tooltipText: "The Pathways Centre is an outreach initiative of the City of Dublin Education and Training Board's (CDETB) educational service to prisons. It offers respite, information, education, counselling, and support for former prisoners.",
         websiteUrl: 'https://www.pathwayscentre.ie/'
     },
     {
