@@ -30,15 +30,16 @@ collections:
     files:
       - file: "src/data/testimonials.json"
         label: "Testimonials List"
-        name:  "list"
-        format: "json"
-        extension: "json"
-        fields:
-          - label: "Entries"
-            name:  "entries"
+        files:
+          - file: "src/data/testimonials.json"
+            label: "Testimonials List"
+            name:  "list"
+            format: "json"
+            extension: "json"
+            # root-level list (no extra object)
             widget: "list"
             fields:
-              - { label: "Person's Name", name: "name", widget: "string" }
+              - { label: "Person's Name", name: "name",  widget: "string" }
               - { label: "Quote",         name: "quote", widget: "text" }
 
   - name: "services"
