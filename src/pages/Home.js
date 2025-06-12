@@ -603,7 +603,8 @@ function Home() {
                                             width: 'auto', 
                                             objectFit: 'contain', 
                                             transition: 'transform 0.3s ease-in-out, opacity 0.3s', 
-                                            opacity: 0.9, 
+                                            opacity: 0.9,
+                                            borderRadius: '8px', // Added this line
                                             '&:hover': { 
                                                 transform: 'scale(1.08)', 
                                                 opacity: 1,
