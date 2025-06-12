@@ -60,7 +60,7 @@ export const sectionTitlesForNav = [
 
 const allDisplayTitles = {
     "About Us": "About Us", "Our Mission": "Our Mission",
-    "Our Core Services": "Our Core Services", "Classes & Services": "Classes and Services Available",
+    "Our Core Services": "Our Core Services", "Classes & Services": "Sample of Classes and Services Available",
     "Who We Welcome": "Who We Welcome", "Referral Process": "Referral Process (For Individuals in Prison)",
     "Contact Us": "Contact Us", "Testimonials": "What People Say About Pathways",
     "Our Sponsors": "Sponsored By"
@@ -97,6 +97,12 @@ const sponsorLogosData = [
         tooltipText: 'The City of Dublin Education and Training Board (CDETB) is the state education and training authority for Dublin city, providing a wide range of educational services. The Pathways Centre is one of its initiatives.',
         websiteUrl: 'https://www.cityofdublinetb.ie/'
     },
+    {
+        src: 'https://res.cloudinary.com/dsa31toc5/image/upload/v1749721461/qqi_provider_2025_vrfwry.png',
+        alt: 'QQI - Quality and Qualifications Ireland',
+        tooltipText: "QQI (Quality and Qualifications Ireland) is the state agency responsible for promoting the quality, integrity and reputation of Ireland's further and higher education system. [3, 10]",
+        websiteUrl: 'https://www.qqi.ie/what-we-do/the-qualifications-system/national-framework-of-qualifications'
+    }
 ];
 
 
@@ -118,10 +124,13 @@ const supportServicesData = [
 const educationalCoursesData = [
     { text: "Animation", icon: faPalette }, { text: "English", icon: faBookOpen },
     { text: "Literacy", icon: faPencilAlt }, { text: "Maths", icon: faCalculator },
-    { text: "Web Design", icon: faLaptopCode }, { text: "Art", icon: faPalette },
-    { text: "Irish", icon: faFlag }, { text: "Music", icon: faMusic },
-    { text: "Creative Writing", icon: faPencilAlt }, { text: "Crime Awareness", icon: faQuestionCircle },
-    { text: "Health & Fitness", icon: faDumbbell },
+    { text: "Art", icon: faPalette }, { text: "Irish", icon: faFlag }, 
+    { text: "Music", icon: faMusic }, { text: "Creative Writing", icon: faPencilAlt }, 
+    { text: "Crime Awareness", icon: faQuestionCircle }, { text: "Health & Fitness", icon: faDumbbell },
+    { text: "Cookery", icon: faBookOpen }, { text: "Understanding Counselling and Psychotherapy", icon: faHeartbeat },
+    { text: "Psychology", icon: faBrain }, { text: "Open Learning Centre", icon: faSchool },
+    { text: "CV Preparation", icon: faBriefcase }, { text: "Food Safety", icon: faBookOpen },
+    { text: "Allergen Awareness", icon: faBookOpen }, { text: "3-d printing", icon: faPalette }
 ];
 
 // Data for QQI Level 5 Major Award in Community Development modules
@@ -208,7 +217,7 @@ function Home() {
     {
         title: "QQI Level 5 Major Award in Community Development",
         icon: faGraduationCap, // Using faGraduationCap for the award
-        description: "To achieve a Major award, you must complete 8 modules.",
+        description: "To achieve a Major award, you must complete 8 modules. The Level 5's can be also completed as stand alone modules, at your own pace with flexible peer learning promoted within the Pathways Centre.",
         data: qqiLevel5ModulesData,
         isSpecialCard: true, // Flag to indicate special rendering for module list
         itemLayout: { xs: 12, sm: 6 } // Modules list items: 1 col on xs, 2 cols on sm and up
@@ -270,6 +279,9 @@ function Home() {
         <Box component="section" id={createSafeId(orderedSectionKeys[3])} sx={getSectionStyle(3)}>
             <Container maxWidth="md">
                 <Typography variant="h2" component="h2">{allDisplayTitles[orderedSectionKeys[3]]}</Typography>
+                <Typography variant="body2" sx={{ textAlign: 'center', mt: 1, fontStyle: 'italic', color: 'text.secondary' }}>
+                    These classes are subject to change throughout each academic term.
+                </Typography>
                 <Grid container spacing={4} sx={{ mt: 2 }} alignItems="stretch">
                     {serviceCategories.map(category => (
                         <Grid item xs={12} key={category.title}> {/* Each card takes full width and stacks vertically */}
