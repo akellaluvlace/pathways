@@ -2,11 +2,10 @@
 
 backend:
   name: github
-  repo: akellaluvlace/pathways # CORRECTED: Removed the leading slash
-  branch: main # Or whatever your main branch is called
+  repo: akellaluvlace/pathways 
+  branch: main 
   
-# This allows Netlify Identity to work with the CMS
-local_backend: true
+# local_backend: true <-- This line has been removed.
 
 # This tells the CMS where to save uploaded images
 media_folder: "public/images/uploads"
