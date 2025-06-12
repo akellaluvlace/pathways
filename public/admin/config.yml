@@ -1,9 +1,10 @@
 # C:\Users\nikit\pathways\pathways_react\public\admin\config.yml
 
 backend:
-  name: github
-  repo: akellaluvlace/pathways 
-  branch: master 
+  name: git-gateway          # see step 2
+  branch: master               # or whatever Netlify builds
+  site_domain: clever-longma-6b22c6.netlify.app
+  base_url: https://api.netlify.com
   
 # local_backend: true <-- This line has been removed.
 
