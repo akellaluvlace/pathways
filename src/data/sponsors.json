@@ -35,6 +35,12 @@
       "alt": "QQI - Quality and Qualifications Ireland",
       "tooltipText": "QQI (Quality and Qualifications Ireland) is the state agency responsible for promoting the quality, integrity, and reputation of Ireland's further and higher education system. They maintain the National Framework of Qualifications (NFQ).",
       "websiteUrl": "https://www.qqi.ie/what-we-do/the-qualifications-system/national-framework-of-qualifications"
+    },
+    {
+      "alt": "Testing",
+      "src": "/images/uploads/screenshot-2025-05-08-114816.png",
+      "tooltipText": "testing tooltip",
+      "websiteUrl": "google.com"
     }
   ]
 }
