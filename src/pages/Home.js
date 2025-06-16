@@ -28,28 +28,10 @@ import ScheduleIcon from '@mui/icons-material/Schedule';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-// --- FONT AWESOME SETUP (FOR TREE-SHAKING) ---
+// --- FONT AWESOME SETUP ---
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// Deep-import each icon individually for tree-shaking
-import { faUsers } from '@fortawesome/free-solid-svg-icons/faUsers';
-import { faHeartbeat } from '@fortawesome/free-solid-svg-icons/faHeartbeat';
-import { faHandsHelping } from '@fortawesome/free-solid-svg-icons/faHandsHelping';
-import { faBrain } from '@fortawesome/free-solid-svg-icons/faBrain';
-import { faPalette } from '@fortawesome/free-solid-svg-icons/faPalette';
-import { faCalculator } from '@fortawesome/free-solid-svg-icons/faCalculator';
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons/faBookOpen';
-import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons/faChalkboardTeacher';
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons/faGraduationCap';
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
-import { faMountain } from '@fortawesome/free-solid-svg-icons/faMountain';
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons/faPencilAlt';
-import { faFlag } from '@fortawesome/free-solid-svg-icons/faFlag';
-import { faMusic } from '@fortawesome/free-solid-svg-icons/faMusic';
-import { faDumbbell } from '@fortawesome/free-solid-svg-icons/faDumbbell';
-import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons/faQuestionCircle';
-import { faSpa } from '@fortawesome/free-solid-svg-icons/faSpa';
-import { faSchool } from '@fortawesome/free-solid-svg-icons/faSchool';
+import { fas } from '@fortawesome/free-solid-svg-icons'; // The whole free-solid collection
 
 // Data Imports from JSON files managed by Decap CMS
 import homeData from '../data/home.json';
@@ -63,12 +45,7 @@ import logoHoverImage from '../assets/images/copypathways222.PNG';
 
 
 // --- FONT AWESOME INITIALIZATION ---
-// Add all used icons to the library *after* they have been imported.
-library.add(
-    faUsers, faHeartbeat, faHandsHelping, faBrain, faPalette, faCalculator,
-    faBookOpen, faChalkboardTeacher, faGraduationCap, faBriefcase, faMountain,
-    faPencilAlt, faFlag, faMusic, faDumbbell, faQuestionCircle, faSpa, faSchool
-);
+library.add(fas); // Registers all free-solid icons at once
 // --- END FONT AWESOME SETUP ---
 
 
@@ -90,40 +67,31 @@ const allDisplayTitles = {
     "Our Sponsors": "Sponsored By"
 };
 
-// Map string names from JSON to the icon object itself
-const faIconMap = {
-    faUsers, faHeartbeat, faHandsHelping, faBrain, faPalette, faCalculator, 
-    faBookOpen, faChalkboardTeacher, faGraduationCap, faBriefcase, faMountain, 
-    faPencilAlt, faFlag, faMusic, faDumbbell, faQuestionCircle, faSpa, faSchool
-};
-
 // --- DATA PROCESSING (No Hooks Needed) ---
 const supportServices = servicesData.entries
-    .filter(s => s.category === 'Support Service')
-    .map(s => ({ ...s, icon: faIconMap[s.icon] ?? faQuestionCircle }));
+    .filter(s => s.category === 'Support Service');
 
 const educationalCourses = servicesData.entries
-    .filter(s => s.category === 'Educational Course')
-    .map(s => ({ ...s, icon: faIconMap[s.icon] ?? faQuestionCircle }));
+    .filter(s => s.category === 'Educational Course');
 
 const qqiModules = servicesData.entries.filter(s => s.category === 'QQI Module');
 
 const serviceCategories = [
     {
         title: "Support Services",
-        icon: faHandsHelping,
+        icon: 'hands-helping',
         data: supportServices,
         itemLayout: { xs: 12, sm: 6, md: 4 }
     },
     {
         title: "Educational Courses",
-        icon: faSchool,
+        icon: 'school',
         data: educationalCourses,
         itemLayout: { xs: 12, sm: 6, md: 4 }
     },
     {
         title: "QQI Level 5 Major Award in Community Development",
-        icon: faGraduationCap,
+        icon: 'graduation-cap',
         description: "To achieve a Major award, you must complete 8 modules. The Level 5's can be also completed as stand alone modules, at your own pace with flexible peer learning promoted within the Pathways Centre.",
         data: qqiModules,
         isSpecialCard: true,
@@ -182,7 +150,7 @@ function Home() {
     const ServiceListItem = ({ text, icon }) => (
         <ListItem sx={{ py: 1, px: 0, width: '100%' }}> 
             <ListItemIcon sx={{ minWidth: 36, color: theme.palette.primary.main, fontSize: '1.2rem' }}>
-                <FontAwesomeIcon icon={icon} />
+                <FontAwesomeIcon icon={['fas', icon || 'question-circle']} />
             </ListItemIcon>
             <ListItemText primary={text} primaryTypographyProps={{ variant: 'body1' }} />
         </ListItem>
@@ -218,7 +186,7 @@ function Home() {
                                         {index === 3 && <SupervisorAccountIcon sx={{ fontSize: '2rem' }} />}
                                     </ListItemIcon>
                                     <ListItemText primary={item.text} primaryTypographyProps={{ variant: 'body1' }} />
-                                </ListItem>
+                                 </ListItem>
                             ))}
                         </List>
                     </Container>
@@ -260,7 +228,7 @@ function Home() {
                                 <Grid item xs={12} key={category.title}>
                                     <Paper variant="outlined" sx={{ p: { xs: 2, sm: 3 }, height: '100%' }}>
                                         <Typography variant="h4" component="h3" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2.5, color: theme.palette.primary.dark }}>
-                                            <FontAwesomeIcon icon={category.icon} style={{ fontSize: '1.8rem' }} /> {category.title}
+                                            <FontAwesomeIcon icon={['fas', category.icon]} style={{ fontSize: '1.8rem' }} /> {category.title}
                                         </Typography>
                                         {category.description && (
                                             <Typography variant="body1" paragraph sx={{ mb: 2, fontStyle: 'italic', color: 'text.secondary' }}>

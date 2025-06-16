@@ -2,152 +2,152 @@
   "entries": [
     {
       "text": "Study Skills",
-      "icon": "faGraduationCap",
+      "icon": "graduation-cap",
       "category": "Support Service"
     },
     {
       "text": "Outdoor pursuits",
-      "icon": "faMountain",
+      "icon": "mountain",
       "category": "Support Service"
     },
     {
       "text": "Peer Support",
-      "icon": "faUsers",
+      "icon": "users",
       "category": "Support Service"
     },
     {
       "text": "Personal Counselling",
-      "icon": "faHeartbeat",
+      "icon": "heartbeat",
       "category": "Support Service"
     },
     {
       "text": "Addiction Counselling",
-      "icon": "faHandsHelping",
+      "icon": "hands-helping",
       "category": "Support Service"
     },
     {
       "text": "Career Guidance",
-      "icon": "faBriefcase",
+      "icon": "briefcase",
       "category": "Support Service"
     },
     {
       "text": "Coping with Change",
-      "icon": "faBrain",
+      "icon": "brain",
       "category": "Support Service"
     },
     {
       "text": "Relaxation Techniques",
-      "icon": "faSpa",
+      "icon": "spa",
       "category": "Support Service"
     },
     {
       "text": "Health and Fitness",
-      "icon": "faDumbbell",
+      "icon": "dumbbell",
       "category": "Support Service"
     },
     {
       "text": "Study Support",
-      "icon": "faBookOpen",
+      "icon": "book-open",
       "category": "Support Service"
     },
     {
       "text": "Job Skills",
-      "icon": "faBriefcase",
+      "icon": "briefcase",
       "category": "Support Service"
     },
     {
       "text": "Exam and College Preparation",
-      "icon": "faChalkboardTeacher",
+      "icon": "chalkboard-teacher",
       "category": "Support Service"
     },
     {
       "text": "Animation",
-      "icon": "faPalette",
+      "icon": "palette",
       "category": "Educational Course"
     },
     {
       "text": "English",
-      "icon": "faBookOpen",
+      "icon": "book-open",
       "category": "Educational Course"
     },
     {
       "text": "Literacy",
-      "icon": "faPencilAlt",
+      "icon": "pencil-alt",
       "category": "Educational Course"
     },
     {
       "text": "Maths",
-      "icon": "faCalculator",
+      "icon": "calculator",
       "category": "Educational Course"
     },
     {
       "text": "Art",
-      "icon": "faPalette",
+      "icon": "palette",
       "category": "Educational Course"
     },
     {
       "text": "Irish",
-      "icon": "faFlag",
+      "icon": "flag",
       "category": "Educational Course"
     },
     {
       "text": "Music",
-      "icon": "faMusic",
+      "icon": "music",
       "category": "Educational Course"
     },
     {
       "text": "Creative Writing",
-      "icon": "faPencilAlt",
+      "icon": "pencil-alt",
       "category": "Educational Course"
     },
     {
       "text": "Crime Awareness",
-      "icon": "faQuestionCircle",
+      "icon": "question-circle",
       "category": "Educational Course"
     },
     {
       "text": "Health & Fitness",
-      "icon": "faDumbbell",
+      "icon": "dumbbell",
       "category": "Educational Course"
     },
     {
       "text": "Cookery",
-      "icon": "faBookOpen",
+      "icon": "book-open",
       "category": "Educational Course"
     },
     {
       "text": "Understanding Counselling and Psychotherapy",
-      "icon": "faHeartbeat",
+      "icon": "heartbeat",
       "category": "Educational Course"
     },
     {
       "text": "Psychology",
-      "icon": "faBrain",
+      "icon": "brain",
       "category": "Educational Course"
     },
     {
       "text": "Open Learning Centre",
-      "icon": "faSchool",
+      "icon": "school",
       "category": "Educational Course"
     },
     {
       "text": "CV Preparation",
-      "icon": "faBriefcase",
+      "icon": "briefcase",
       "category": "Educational Course"
     },
     {
       "text": "Food Safety",
-      "icon": "faBookOpen",
+      "icon": "book-open",
       "category": "Educational Course"
     },
     {
       "text": "Allergen Awareness",
-      "icon": "faBookOpen",
+      "icon": "book-open",
       "category": "Educational Course"
     },
     {
       "text": "3-d printing",
-      "icon": "faPalette",
+      "icon": "palette",
       "category": "Educational Course"
     },
     {
@@ -192,7 +192,7 @@
     },
     {
       "text": "Test",
-      "icon": "faMicrochip",
+      "icon": "microchip",
       "category": "Educational Course"
     }
   ]
