@@ -1,10 +1,40 @@
 {
   "entries": [
-    { "src": "/images/uploads/1000079142.png", "alt": "City of Dublin FET College - Pathways Centre", "tooltipText": "The Pathways Centre is an outreach initiative...", "websiteUrl": "https://www.pathwayscentre.ie/" },
-    { "src": "/images/uploads/both full colour.png", "alt": "Co-Funded by the European Union", "tooltipText": "The European Union co-funds the Pathways Centre...", "websiteUrl": "https://european-union.europa.eu/live-work-study/funding-grants-subsidies_en" },
-    { "src": "/images/uploads/Rialtas_Mark_Std_Colour.png", "alt": "Government of Ireland", "tooltipText": "The Government of Ireland co-funds the Pathways Centre...", "websiteUrl": "https://www.gov.ie/" },
-    { "src": "/images/uploads/SOLAS logo super high res transparent (2).png", "alt": "SOLAS - Learning Works", "tooltipText": "SOLAS is Ireland's Further Education and Training Authority...", "websiteUrl": "https://www.solas.ie/" },
-    { "src": "/images/uploads/cdetb_logos_cmyk-01.png", "alt": "City of Dublin Education and Training Board (CDETB)", "tooltipText": "The City of Dublin Education and Training Board (CDETB) is the state education...", "websiteUrl": "https://www.cityofdublinetb.ie/" },
-    { "src": "https://res.cloudinary.com/dsa31toc5/image/upload/v1749721461/qqi_provider_2025_vrfwry.png", "alt": "QQI - Quality and Qualifications Ireland", "tooltipText": "QQI (Quality and Qualifications Ireland) is the state agency responsible for promoting the quality...", "websiteUrl": "https://www.qqi.ie/what-we-do/the-qualifications-system/national-framework-of-qualifications" }
+    {
+      "src": "/images/uploads/1000079142.png",
+      "alt": "City of Dublin FET College - Pathways Centre",
+      "tooltipText": "The Pathways Centre is an outreach initiative of the City of Dublin Further Education and Training College, providing support, education, and guidance to individuals seeking to re-engage with learning and employment.",
+      "websiteUrl": "https://www.pathwayscentre.ie/"
+    },
+    {
+      "src": "/images/uploads/both full colour.png",
+      "alt": "Co-Funded by the European Union",
+      "tooltipText": "The European Union co-funds the Pathways Centre through initiatives like the European Social Fund (ESF), supporting projects that improve employment opportunities and social inclusion across member states.",
+      "websiteUrl": "https://european-union.europa.eu/live-work-study/funding-grants-subsidies_en"
+    },
+    {
+      "src": "/images/uploads/Rialtas_Mark_Std_Colour.png",
+      "alt": "Government of Ireland",
+      "tooltipText": "The Government of Ireland co-funds the Pathways Centre, demonstrating its commitment to supporting further education, rehabilitation, and community development initiatives nationwide.",
+      "websiteUrl": "https://www.gov.ie/"
+    },
+    {
+      "src": "/images/uploads/SOLAS logo super high res transparent (2).png",
+      "alt": "SOLAS - Learning Works",
+      "tooltipText": "SOLAS is Ireland's Further Education and Training Authority, responsible for funding, planning, and coordinating a wide range of training and education programmes across the country.",
+      "websiteUrl": "https://www.solas.ie/"
+    },
+    {
+      "src": "/images/uploads/cdetb_logos_cmyk-01.png",
+      "alt": "City of Dublin Education and Training Board (CDETB)",
+      "tooltipText": "The City of Dublin Education and Training Board (CDETB) is the state education and training authority for Dublin city, managing a network of schools, colleges, and centres, including the Pathways Centre.",
+      "websiteUrl": "https://www.cityofdublinetb.ie/"
+    },
+    {
+      "src": "https://res.cloudinary.com/dsa31toc5/image/upload/v1749721461/qqi_provider_2025_vrfwry.png",
+      "alt": "QQI - Quality and Qualifications Ireland",
+      "tooltipText": "QQI (Quality and Qualifications Ireland) is the state agency responsible for promoting the quality, integrity, and reputation of Ireland's further and higher education system. They maintain the National Framework of Qualifications (NFQ).",
+      "websiteUrl": "https://www.qqi.ie/what-we-do/the-qualifications-system/national-framework-of-qualifications"
+    }
   ]
 }
