@@ -425,19 +425,19 @@ function Home() {
                             {allDisplayTitles[orderedSectionKeys[8]]}
                         </Typography>
                         <Typography variant="body1" sx={{ textAlign: 'center', mb: 1, color: theme.palette.text.secondary }}>
-                            The Pathways Centre is co-funded by the Government of Ireland and the European Union. {' '}
-                            <Link href="https://www.eufunds.ie" target="_blank" rel="noopener noreferrer" sx={{ color: theme.palette.primary.main, textDecoration: 'underline', '&:hover': { textDecorationColor: theme.palette.primary.dark } }}>
-                                www.eufunds.ie
+                            {homeData.sponsors_info.co_funded_line}{' '}
+                            <Link href={homeData.sponsors_info.eufunds_url} target="_blank" rel="noopener noreferrer" sx={{ color: theme.palette.primary.main, textDecoration: 'underline', '&:hover': { textDecorationColor: theme.palette.primary.dark } }}>
+                                {homeData.sponsors_info.eufunds_display_text}
                             </Link>
                         </Typography>
                         <Typography variant="body1" sx={{ textAlign: 'center', mb: 0.5, color: theme.palette.text.secondary }}>
-                            The Pathways Centre is funded by the City of Dublin Education and Training Board.
+                            {homeData.sponsors_info.cdetb_funded_line}
                         </Typography>
                         <Typography variant="body1" sx={{ textAlign: 'center', mb: 4, color: theme.palette.text.secondary }}>
-                            Click the link below to access the City of Dublin ETB website.
+                            {homeData.sponsors_info.cdetb_access_line}
                             <br />
-                            <Link href="https://www.cityofdublinetb.ie" target="_blank" rel="noopener noreferrer" sx={{ color: theme.palette.primary.main, textDecoration: 'underline', '&:hover': { textDecorationColor: theme.palette.primary.dark }, wordBreak: 'break-all' }}>
-                                https://www.cityofdublinetb.ie
+                            <Link href={homeData.sponsors_info.cdetb_url} target="_blank" rel="noopener noreferrer" sx={{ color: theme.palette.primary.main, textDecoration: 'underline', '&:hover': { textDecorationColor: theme.palette.primary.dark }, wordBreak: 'break-all' }}>
+                                {homeData.sponsors_info.cdetb_url}
                             </Link>
                         </Typography>
                         <Grid container spacing={{xs: 3, sm: 4}} justifyContent="center" alignItems="center">

@@ -28,5 +28,13 @@
   "contact_email": "info@pathwayscentre.ie",
   "manager_name": "Niall Walsh",
   "google_maps_url": "https://goo.gl/maps/TkyvLqvP2d35CK1B7",
-  "google_maps_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.397565927806!2d-6.26652257249146!3d53.354039492589756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80faada995%3A0xa3b3ade6dc94e201!2sParnell%20Court%2C%201%20Granby%20Row%2C%20Rotunda%2C%20Dublin%201!5e0!3m2!1sen!2sie!4v1747316744628!5m2!1sen!2sie"
+  "google_maps_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.397565927806!2d-6.26652257249146!3d53.354039492589756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80faada995%3A0xa3b3ade6dc94e201!2sParnell%20Court%2C%201%20Granby%20Row%2C%20Rotunda%2C%20Dublin%201!5e0!3m2!1sen!2sie!4v1747316744628!5m2!1sen!2sie",
+  "sponsors_info": {
+    "co_funded_line": "The Pathways Centre is co-funded by the Government of Ireland and the European Union.",
+    "eufunds_url": "https://www.eufunds.ie",
+    "eufunds_display_text": "www.eufunds.ie",
+    "cdetb_funded_line": "The Pathways Centre is funded by the City of Dublin Education and Training Board.",
+    "cdetb_access_line": "Click the link below to access the City of Dublin ETB website.",
+    "cdetb_url": "https://www.cityofdublinetb.ie"
+  }
 }
