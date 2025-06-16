@@ -3,51 +3,90 @@ backend:
   branch: master
   site_domain: clever-longma-6b22c6.netlify.app
   base_url: https://api.netlify.com
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: 'Upload “{{path}}”'
+    deleteMedia: 'Delete “{{path}}”'
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  # 1 — sponsors (unchanged) -----------------------------
-  - name: "sponsors"
-    label: "Sponsors"
-    folder: "src/data/sponsors"
-    create: true
-    slug: "{{alt}}"
-    format: "json"
-    extension: "json"
-    fields:
-      - { label: "Sponsor Name (for Alt Text)", name: "alt", widget: "string" }
-      - { label: "Logo",           name: "src",          widget: "image" }
-      - { label: "Tooltip Text",   name: "tooltipText",  widget: "text" }
-      - { label: "Website URL",    name: "websiteUrl",   widget: "string" }
-
-  # 2 — testimonials (fixed) -----------------------------
-  - label: "Testimonials"
-    name:  "testimonials"
+  - name: "pages"
+    label: "Page Content"
     files:
-      - file: "src/data/testimonials.json"
-        label: "Testimonials List"
-        name:  "list"                 # REQUIRED
+      - file: "src/data/home.json"
         format: "json"
-        extension: "json"
-        widget: "list"                # root-level array
+        label: "Home Page"
+        name: "home"
         fields:
-          - { label: "Person's Name", name: "name",  widget: "string" }
-          - { label: "Quote",         name: "quote", widget: "text" }
+          - { label: "About Us Content", name: "about_us_content", widget: "markdown" }
+          - { label: "Our Mission Items", name: "mission_items", widget: "list", fields: [
+              { name: "text", label: "Item Text", widget: "string" }
+            ]}
+          - { label: "Core Services Video URL", name: "core_services_video_url", widget: "string" }
+          - { label: "Core Services List", name: "core_services_list", widget: "list", fields: [
+              { name: "text", label: "Item Text", widget: "string" }
+            ]}
+          - { label: "Who We Welcome Text", name: "who_we_welcome_text", widget: "text" }
+          - { label: "Opening Hours", name: "opening_hours", widget: "list", fields: [
+              { name: "line", label: "Day & Time", widget: "string" }
+            ]}
+          - { label: "Referral Process Items", name: "referral_process_items", widget: "list", fields: [
+              { name: "text", label: "Item Text", widget: "string" }
+            ]}
+          - { label: "Contact Phone", name: "contact_phone", widget: "string" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+          - { label: "Manager Name", name: "manager_name", widget: "string" }
+          - { label: "Google Maps URL", name: "google_maps_url", widget: "string" }
+          - { label: "Google Maps Embed URL", name: "google_maps_embed_url", widget: "string" }
 
-  # 3 — services (unchanged) -----------------------------
   - name: "services"
     label: "Classes & Services"
-    folder: "src/data/services"
-    create: true
-    slug: "{{text}}"
-    format: "json"
-    extension: "json"
-    fields:
-      - { label: "Service Name", name: "text", widget: "string" }
-      - { label: "Icon (FontAwesome)", name: "icon", widget: "string" }
-      - label: "Category"
-        name: "category"
-        widget: "select"
-        options: ["Support Service", "Educational Course", "QQI Module"]
+    files:
+      - file: "src/data/services.json"
+        format: "json"
+        label: "All Services"
+        name: "services"
+        fields:
+          - label: "Entries"
+            name: "entries"
+            widget: "list"
+            fields:
+              - { label: "Service Name", name: "text", widget: "string" }
+              - { label: "Icon (FontAwesome key e.g. faGraduationCap)", name: "icon", widget: "string", required: false }
+              - { label: "Category", name: "category", widget: "select", options: ["Support Service", "Educational Course", "QQI Module"] }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    files:
+      - file: "src/data/testimonials.json"
+        format: "json"
+        label: "Testimonials List"
+        name: "testimonials"
+        fields:
+          - label: "Entries"
+            name: "entries"
+            widget: "list"
+            fields:
+              - { label: "Person's Name", name: "name",  widget: "string" }
+              - { label: "Quote",         name: "quote", widget: "text" }
+
+  - name: "sponsors"
+    label: "Sponsors"
+    files:
+      - file: "src/data/sponsors.json"
+        format: "json"
+        label: "Sponsors List"
+        name: "sponsors"
+        fields:
+          - label: "Entries"
+            name: "entries"
+            widget: "list"
+            fields:
+              - { label: "Sponsor Name (for Alt Text)", name: "alt", widget: "string" }
+              - { label: "Logo", name: "src", widget: "image" }
+              - { label: "Tooltip Text", name: "tooltipText", widget: "text" }
+              - { label: "Website URL", name: "websiteUrl", widget: "string" }

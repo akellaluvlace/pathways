@@ -1,0 +1,32 @@
+{
+  "about_us_content": "Founded in 1996, The Pathways Centre is an outreach initiative of the City of Dublin Education and Training Board (City of Dublin ETB)  Educational Service to Prisons. We offer a safe and understanding environment for former prisoners in the crucial period after release.",
+  "mission_items": [
+    { "text": "Respite for former prisoners after release." },
+    { "text": "Information, education, counselling, support, and referral services." },
+    { "text": "A safe and understanding environment." },
+    { "text": "Staffed by fully qualified teachers and counsellors." }
+  ],
+  "core_services_video_url": "https://www.youtube.com/embed/u3n0cOw3_4w?si=zW8kVGdJItxX1R8c",
+  "core_services_list": [
+    { "text": "Peer Support Work" },
+    { "text": "Educational Programmes & Activities" },
+    { "text": "Guidance Counselling" },
+    { "text": "Personal Addiction Counselling" }
+  ],
+  "who_we_welcome_text": "The Pathways Centre is open to <strong>serving and former prisoners, their families, and members of the wider community.</strong>",
+  "opening_hours": [
+    { "line": "Monday: 9:00 am - 4:00 pm" },
+    { "line": "Tuesday - Thursday: 9:00 am - 6:00 pm" },
+    { "line": "Friday: 11:00 am - 4:00 pm" }
+  ],
+  "referral_process_items": [
+    { "text": "Contact staff in the <strong>Education Centre</strong>." },
+    { "text": "Reach out through <strong>pre-release courses</strong>, the <strong>Integrated Sentence Management (I.S.M.) officer</strong>, or the <strong>Training & Employment officer</strong> for referral." },
+    { "text": "If suitable, a staff worker from The Pathways Centre will arrange to visit you in prison." }
+  ],
+  "contact_phone": "+353 (0) 1 872 6499",
+  "contact_email": "info@pathwayscentre.ie",
+  "manager_name": "Niall Walsh",
+  "google_maps_url": "https://goo.gl/maps/TkyvLqvP2d35CK1B7",
+  "google_maps_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.397565927806!2d-6.26652257249146!3d53.354039492589756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80faada995%3A0xa3b3ade6dc94e201!2sParnell%20Court%2C%201%20Granby%20Row%2C%20Rotunda%2C%20Dublin%201!5e0!3m2!1sen!2sie!4v1747316744628!5m2!1sen!2sie"
+}

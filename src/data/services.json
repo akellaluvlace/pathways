@@ -1,192 +1,42 @@
-[
-  {
-    "text": "Study Skills",
-    "icon": "faGraduationCap",
-    "category": "Support Service"
-  },
-  {
-    "text": "Outdoor pursuits",
-    "icon": "faMountain",
-    "category": "Support Service"
-  },
-  {
-    "text": "Peer Support",
-    "icon": "faUsers",
-    "category": "Support Service"
-  },
-  {
-    "text": "Personal Counselling",
-    "icon": "faHeartbeat",
-    "category": "Support Service"
-  },
-  {
-    "text": "Addiction Counselling",
-    "icon": "faHandsHelping",
-    "category": "Support Service"
-  },
-  {
-    "text": "Career Guidance",
-    "icon": "faBriefcase",
-    "category": "Support Service"
-  },
-  {
-    "text": "Coping with Change",
-    "icon": "faBrain",
-    "category": "Support Service"
-  },
-  {
-    "text": "Relaxation Techniques",
-    "icon": "faSpa",
-    "category": "Support Service"
-  },
-  {
-    "text": "Health and Fitness",
-    "icon": "faDumbbell",
-    "category": "Support Service"
-  },
-  {
-    "text": "Study Support",
-    "icon": "faBookOpen",
-    "category": "Support Service"
-  },
-  {
-    "text": "Job Skills",
-    "icon": "faBriefcase",
-    "category": "Support Service"
-  },
-  {
-    "text": "Exam and College Preparation",
-    "icon": "faChalkboardTeacher",
-    "category": "Support Service"
-  },
-  {
-    "text": "Animation",
-    "icon": "faPalette",
-    "category": "Educational Course"
-  },
-  {
-    "text": "English",
-    "icon": "faBookOpen",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Literacy",
-    "icon": "faPencilAlt",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Maths",
-    "icon": "faCalculator",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Art",
-    "icon": "faPalette",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Irish",
-    "icon": "faFlag",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Music",
-    "icon": "faMusic",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Creative Writing",
-    "icon": "faPencilAlt",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Crime Awareness",
-    "icon": "faQuestionCircle",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Health & Fitness",
-    "icon": "faDumbbell",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Cookery",
-    "icon": "faBookOpen",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Understanding Counselling and Psychotherapy",
-    "icon": "faHeartbeat",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Psychology",
-    "icon": "faBrain",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Open Learning Centre",
-    "icon": "faSchool",
-    "category": "Educational Course"
-  },
-  {
-    "text": "CV Preparation",
-    "icon": "faBriefcase",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Food Safety",
-    "icon": "faBookOpen",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Allergen Awareness",
-    "icon": "faBookOpen",
-    "category": "Educational Course"
-  },
-  {
-    "text": "3-d printing",
-    "icon": "faPalette",
-    "category": "Educational Course"
-  },
-  {
-    "text": "Personal Effectiveness",
-    "icon": "",
-    "category": "QQI Module"
-  },
-  {
-    "text": "Young people and Society",
-    "icon": "",
-    "category": "QQI Module"
-  },
-  {
-    "text": "Working with Groups",
-    "icon": "",
-    "category": "QQI Module"
-  },
-  {
-    "text": "Addiction studies",
-    "icon": "",
-    "category": "QQI Module"
-  },
-  {
-    "text": "Work Experience",
-    "icon": "",
-    "category": "QQI Module"
-  },
-  {
-    "text": "Community Development practice",
-    "icon": "",
-    "category": "QQI Module"
-  },
-  {
-    "text": "Social studies",
-    "icon": "",
-    "category": "QQI Module"
-  },
-  {
-    "text": "Understanding Community development",
-    "icon": "",
-    "category": "QQI Module"
-  }
-]
+{
+  "entries": [
+    { "text": "Study Skills", "icon": "faGraduationCap", "category": "Support Service" },
+    { "text": "Outdoor pursuits", "icon": "faMountain", "category": "Support Service" },
+    { "text": "Peer Support", "icon": "faUsers", "category": "Support Service" },
+    { "text": "Personal Counselling", "icon": "faHeartbeat", "category": "Support Service" },
+    { "text": "Addiction Counselling", "icon": "faHandsHelping", "category": "Support Service" },
+    { "text": "Career Guidance", "icon": "faBriefcase", "category": "Support Service" },
+    { "text": "Coping with Change", "icon": "faBrain", "category": "Support Service" },
+    { "text": "Relaxation Techniques", "icon": "faSpa", "category": "Support Service" },
+    { "text": "Health and Fitness", "icon": "faDumbbell", "category": "Support Service" },
+    { "text": "Study Support", "icon": "faBookOpen", "category": "Support Service" },
+    { "text": "Job Skills", "icon": "faBriefcase", "category": "Support Service" },
+    { "text": "Exam and College Preparation", "icon": "faChalkboardTeacher", "category": "Support Service" },
+    { "text": "Animation", "icon": "faPalette", "category": "Educational Course" },
+    { "text": "English", "icon": "faBookOpen", "category": "Educational Course" },
+    { "text": "Literacy", "icon": "faPencilAlt", "category": "Educational Course" },
+    { "text": "Maths", "icon": "faCalculator", "category": "Educational Course" },
+    { "text": "Art", "icon": "faPalette", "category": "Educational Course" },
+    { "text": "Irish", "icon": "faFlag", "category": "Educational Course" },
+    { "text": "Music", "icon": "faMusic", "category": "Educational Course" },
+    { "text": "Creative Writing", "icon": "faPencilAlt", "category": "Educational Course" },
+    { "text": "Crime Awareness", "icon": "faQuestionCircle", "category": "Educational Course" },
+    { "text": "Health & Fitness", "icon": "faDumbbell", "category": "Educational Course" },
+    { "text": "Cookery", "icon": "faBookOpen", "category": "Educational Course" },
+    { "text": "Understanding Counselling and Psychotherapy", "icon": "faHeartbeat", "category": "Educational Course" },
+    { "text": "Psychology", "icon": "faBrain", "category": "Educational Course" },
+    { "text": "Open Learning Centre", "icon": "faSchool", "category": "Educational Course" },
+    { "text": "CV Preparation", "icon": "faBriefcase", "category": "Educational Course" },
+    { "text": "Food Safety", "icon": "faBookOpen", "category": "Educational Course" },
+    { "text": "Allergen Awareness", "icon": "faBookOpen", "category": "Educational Course" },
+    { "text": "3-d printing", "icon": "faPalette", "category": "Educational Course" },
+    { "text": "Personal Effectiveness", "icon": null, "category": "QQI Module" },
+    { "text": "Young people and Society", "icon": null, "category": "QQI Module" },
+    { "text": "Working with Groups", "icon": null, "category": "QQI Module" },
+    { "text": "Addiction studies", "icon": null, "category": "QQI Module" },
+    { "text": "Work Experience", "icon": null, "category": "QQI Module" },
+    { "text": "Community Development practice", "icon": null, "category": "QQI Module" },
+    { "text": "Social studies", "icon": null, "category": "QQI Module" },
+    { "text": "Understanding Community development", "icon": null, "category": "QQI Module" }
+  ]
+}
