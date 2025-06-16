@@ -51,7 +51,19 @@ import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons/faQuestionCi
 import { faSpa } from '@fortawesome/free-solid-svg-icons/faSpa';
 import { faSchool } from '@fortawesome/free-solid-svg-icons/faSchool';
 
-// Add all used icons to the library
+// Data Imports from JSON files managed by Decap CMS
+import homeData from '../data/home.json';
+import servicesData from '../data/services.json';
+import testimonialsData from '../data/testimonials.json';
+import sponsorsData from '../data/sponsors.json';
+
+// Image asset imports
+import logoImage from '../assets/images/copypathways.png';
+import logoHoverImage from '../assets/images/copypathways222.PNG';
+
+
+// --- FONT AWESOME INITIALIZATION ---
+// Add all used icons to the library *after* they have been imported.
 library.add(
     faUsers, faHeartbeat, faHandsHelping, faBrain, faPalette, faCalculator,
     faBookOpen, faChalkboardTeacher, faGraduationCap, faBriefcase, faMountain,
@@ -59,14 +71,6 @@ library.add(
 );
 // --- END FONT AWESOME SETUP ---
 
-// Data Imports from JSON files managed by Decap CMS
-import homeData from '../data/home.json';
-import servicesData from '../data/services.json';
-import testimonialsData from '../data/testimonials.json';
-import sponsorsData from '../data/sponsors.json';
-
-import logoImage from '../assets/images/copypathways.png';
-import logoHoverImage from '../assets/images/copypathways222.PNG';
 
 const createSafeId = (title) => {
   if (!title) return '';
