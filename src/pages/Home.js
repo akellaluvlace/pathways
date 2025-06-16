@@ -48,6 +48,20 @@ import logoHoverImage from '../assets/images/copypathways222.PNG';
 library.add(fas); // Registers all free-solid icons at once
 // --- END FONT AWESOME SETUP ---
 
+// Helper to ensure sponsor URLs are absolute for external linking
+const getSponsorHref = (logo) => {
+    const { websiteUrl, alt } = logo;
+    if (websiteUrl) {
+        // If URL already has a protocol, is root-relative, or a mailto/tel link, use as is.
+        if (/^(https?:\/\/|\/\/|\/|mailto:|tel:)/.test(websiteUrl)) {
+            return websiteUrl;
+        }
+        // Otherwise, assume it's an external domain like 'google.com' and prepend 'https://'
+        return `https://${websiteUrl}`;
+    }
+    // Fallback to a Google search if no URL is provided.
+    return `https://www.google.com/search?q=${encodeURIComponent(alt)}`;
+};
 
 const createSafeId = (title) => {
   if (!title) return '';
@@ -412,7 +426,7 @@ function Home() {
                             {sponsors.map((logo, index) => (
                                 <Grid item xs={6} sm={4} md={2.4} key={index} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> 
                                    <Tooltip title={logo.tooltipText} arrow>
-                                        <Link href={logo.websiteUrl || `https://www.google.com/search?q=${encodeURIComponent(logo.alt)}`} target="_blank" rel="noopener noreferrer" sx={{ display: 'block', lineHeight: 0 }}>
+                                        <Link href={getSponsorHref(logo)} target="_blank" rel="noopener noreferrer" sx={{ display: 'block', lineHeight: 0 }}>
                                             <Box component="img" src={logo.src} alt={logo.alt} sx={{ maxWidth: '100%', maxHeight: {xs: '50px', sm: '60px', md: '70px'}, width: 'auto', objectFit: 'contain', transition: 'transform 0.3s ease-in-out, opacity 0.3s', opacity: 0.9, borderRadius: '8px', '&:hover': { transform: 'scale(1.08)', opacity: 1 } }} />
                                         </Link>
                                     </Tooltip>
