@@ -583,9 +583,11 @@ function Home() {
                         https://www.cityofdublinetb.ie
                     </Link>
                 </Typography>
-                <Grid container spacing={{xs: 3, sm: 4}} justifyContent="center" alignItems="center">
-                    {sponsorLogosData.map((logo, index) => (
-                        <Grid item xs={6} sm={4} md={2.4} key={index} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> 
+                
+                {/* Row for the first two larger logos */}
+                <Grid container spacing={{ xs: 4, sm: 5 }} justifyContent="center" alignItems="center" sx={{ mb: { xs: 4, sm: 6 } }}>
+                    {sponsorLogosData.slice(0, 2).map((logo, index) => (
+                        <Grid item xs={12} sm={6} key={index} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> 
                            <Tooltip title={logo.tooltipText} arrow>
                                 <Link 
                                     href={logo.websiteUrl || `https://www.google.com/search?q=${encodeURIComponent(logo.alt)}`} 
@@ -599,12 +601,47 @@ function Home() {
                                         alt={logo.alt} 
                                         sx={{ 
                                             maxWidth: '100%', 
-                                            maxHeight: {xs: '50px', sm: '60px', md: '70px'}, 
+                                            maxHeight: { xs: '100px', sm: '120px', md: '140px' }, // Twice the original size
                                             width: 'auto', 
                                             objectFit: 'contain', 
                                             transition: 'transform 0.3s ease-in-out, opacity 0.3s', 
                                             opacity: 0.9,
-                                            borderRadius: '8px', // Added this line
+                                            borderRadius: '8px',
+                                            '&:hover': { 
+                                                transform: 'scale(1.08)', 
+                                                opacity: 1,
+                                            } 
+                                        }} 
+                                    />
+                                </Link>
+                            </Tooltip>
+                        </Grid>
+                    ))}
+                </Grid>
+
+                {/* Row for the remaining logos */}
+                <Grid container spacing={{xs: 3, sm: 4}} justifyContent="center" alignItems="center">
+                    {sponsorLogosData.slice(2).map((logo, index) => (
+                        <Grid item xs={6} sm={3} key={index} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> 
+                           <Tooltip title={logo.tooltipText} arrow>
+                                <Link 
+                                    href={logo.websiteUrl || `https://www.google.com/search?q=${encodeURIComponent(logo.alt)}`} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    sx={{ display: 'block', lineHeight: 0 }}
+                                >
+                                    <Box 
+                                        component="img" 
+                                        src={logo.src} 
+                                        alt={logo.alt} 
+                                        sx={{ 
+                                            maxWidth: '100%', 
+                                            maxHeight: {xs: '50px', sm: '60px', md: '70px'}, // Original size
+                                            width: 'auto', 
+                                            objectFit: 'contain', 
+                                            transition: 'transform 0.3s ease-in-out, opacity 0.3s', 
+                                            opacity: 0.9,
+                                            borderRadius: '8px',
                                             '&:hover': { 
                                                 transform: 'scale(1.08)', 
                                                 opacity: 1,
