@@ -1,3 +1,4 @@
+// src/pages/Home.js
 import React, { useState } from 'react';
 import {
     Container, Grid, CardContent, Typography, Box, List, ListItem, ListItemIcon, ListItemText, alpha, useTheme, Paper, Link, Tooltip
@@ -582,70 +583,33 @@ function Home() {
                         https://www.cityofdublinetb.ie
                     </Link>
                 </Typography>
-                
-                {/* First two sponsors */}
-                <Grid container spacing={{xs: 3, sm: 6}} justifyContent="center" alignItems="center">
-                    {sponsorLogosData.slice(0, 2).map((logo, index) => (
-                        <Grid item xs={6} sm={5} md={4} key={index} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Grid container spacing={{xs: 3, sm: 4}} justifyContent="center" alignItems="center">
+                    {sponsorLogosData.map((logo, index) => (
+                        <Grid item xs={6} sm={4} md={2.4} key={index} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> 
                            <Tooltip title={logo.tooltipText} arrow>
-                                <Link
-                                    href={logo.websiteUrl || `https://www.google.com/search?q=${encodeURIComponent(logo.alt)}`}
-                                    target="_blank"
+                                <Link 
+                                    href={logo.websiteUrl || `https://www.google.com/search?q=${encodeURIComponent(logo.alt)}`} 
+                                    target="_blank" 
                                     rel="noopener noreferrer"
                                     sx={{ display: 'block', lineHeight: 0 }}
                                 >
-                                    <Box
-                                        component="img"
-                                        src={logo.src}
-                                        alt={logo.alt}
-                                        sx={{
-                                            maxWidth: '100%',
-                                            maxHeight: {xs: '100px', sm: '120px', md: '140px'},
-                                            width: 'auto',
-                                            objectFit: 'contain',
-                                            transition: 'transform 0.3s ease-in-out, opacity 0.3s',
+                                    <Box 
+                                        component="img" 
+                                        src={logo.src} 
+                                        alt={logo.alt} 
+                                        sx={{ 
+                                            maxWidth: '100%', 
+                                            maxHeight: {xs: '50px', sm: '60px', md: '70px'}, 
+                                            width: 'auto', 
+                                            objectFit: 'contain', 
+                                            transition: 'transform 0.3s ease-in-out, opacity 0.3s', 
                                             opacity: 0.9,
-                                            borderRadius: '8px',
-                                            '&:hover': {
-                                                transform: 'scale(1.08)',
+                                            borderRadius: '8px', // Added this line
+                                            '&:hover': { 
+                                                transform: 'scale(1.08)', 
                                                 opacity: 1,
-                                            }
-                                        }}
-                                    />
-                                </Link>
-                            </Tooltip>
-                        </Grid>
-                    ))}
-                </Grid>
-
-                {/* Rest of the sponsors */}
-                <Grid container spacing={{xs: 3, sm: 4}} justifyContent="center" alignItems="center" sx={{ mt: { xs: 4, md: 5 } }}>
-                    {sponsorLogosData.slice(2).map((logo, index) => (
-                        <Grid item xs={6} sm={4} md={3} key={index + 2} sx={{ textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                           <Tooltip title={logo.tooltipText} arrow>
-                                <Link
-                                    href={logo.websiteUrl || `https://www.google.com/search?q=${encodeURIComponent(logo.alt)}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    sx={{ display: 'block', lineHeight: 0 }}
-                                >
-                                    <Box
-                                        component="img"
-                                        src={logo.src}
-                                        alt={logo.alt}
-                                        sx={{
-                                            maxWidth: '100%',
-                                            maxHeight: {xs: '50px', sm: '60px', md: '70px'},
-                                            width: 'auto',
-                                            objectFit: 'contain',
-                                            transition: 'transform 0.3s ease-in-out, opacity 0.3s',
-                                            opacity: 0.9,
-                                            borderRadius: '8px',
-                                            '&:hover': {
-                                                transform: 'scale(1.08)',
-                                                opacity: 1,
-                                            }
-                                        }}
+                                            } 
+                                        }} 
                                     />
                                 </Link>
                             </Tooltip>
