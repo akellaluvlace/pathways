@@ -68,40 +68,40 @@ const allDisplayTitles = {
 
 const sponsorLogosData = [
     {
-        src: sponsorLogo1,
-        alt: 'City of Dublin FET College - Pathways Centre',
-        tooltipText: "The Pathways Centre is an outreach initiative of the City of Dublin Education and Training Board's (CDETB) Educational Service to Prisons. It offers respite, information, education, counselling, and support for former prisoners.",
-        websiteUrl: 'https://www.pathwayscentre.ie/'
+        src: sponsorLogo3,
+        alt: "Government of Ireland",
+        tooltipText: "The Government of Ireland co-funds the Pathways Centre, demonstrating its commitment to supporting further education, rehabilitation, and community development initiatives nationwide.",
+        websiteUrl: "https://www.gov.ie/"
     },
     {
         src: sponsorLogo2,
-        alt: 'Co-Funded by the European Union',
-        tooltipText: 'The European Union co-funds the Pathways Centre. The EU provides various funding programmes to support projects in areas like employment, social inclusion, education, and regional development.',
-        websiteUrl: 'https://european-union.europa.eu/live-work-study/funding-grants-subsidies_en'
-    },
-    {
-        src: sponsorLogo3,
-        alt: 'Government of Ireland',
-        tooltipText: 'The Government of Ireland co-funds the Pathways Centre. Gov.ie is the official portal for Irish government information and services.',
-        websiteUrl: 'https://www.gov.ie/'
+        alt: "Co-Funded by the European Union",
+        tooltipText: "The European Union co-funds the Pathways Centre through initiatives like the European Social Fund (ESF), supporting projects that improve employment opportunities and social inclusion across member states.",
+        websiteUrl: "https://european-union.europa.eu/live-work-study/funding-grants-subsidies_en"
     },
     {
         src: sponsorLogo4,
-        alt: 'SOLAS - Learning Works',
-        tooltipText: "SOLAS is Ireland's Further Education and Training Authority. It is responsible for funding, planning, and co-ordinating Further Education and Training (FET) programmes.",
-        websiteUrl: 'https://www.solas.ie/'
+        alt: "SOLAS - Learning Works",
+        tooltipText: "SOLAS is Ireland's Further Education and Training Authority, responsible for funding, planning, and coordinating a wide range of training and education programmes across the country.",
+        websiteUrl: "https://www.solas.ie/"
     },
     {
         src: cdetbLogo,
-        alt: 'City of Dublin Education and Training Board (CDETB)',
-        tooltipText: 'The City of Dublin Education and Training Board (CDETB) is the state education and training authority for Dublin city, providing a wide range of educational services. The Pathways Centre is one of its initiatives.',
-        websiteUrl: 'https://www.cityofdublinetb.ie/'
+        alt: "City of Dublin Education and Training Board (CDETB)",
+        tooltipText: "The City of Dublin Education and Training Board (CDETB) is the state education and training authority for Dublin city, managing a network of schools, colleges, and centres, including the Pathways Centre.",
+        websiteUrl: "https://www.cityofdublinetb.ie/"
     },
     {
-        src: 'https://res.cloudinary.com/dsa31toc5/image/upload/v1749721461/qqi_provider_2025_vrfwry.png',
-        alt: 'QQI - Quality and Qualifications Ireland',
-        tooltipText: "QQI (Quality and Qualifications Ireland) is the state agency responsible for promoting the quality, integrity and reputation of Ireland's further and higher education system. [3, 10]",
-        websiteUrl: 'https://www.qqi.ie/what-we-do/the-qualifications-system/national-framework-of-qualifications'
+        src: sponsorLogo1,
+        alt: "City of Dublin FET College - Pathways Centre",
+        tooltipText: "The Pathways Centre is an outreach initiative of the City of Dublin Further Education and Training College, providing support, education, and guidance to individuals seeking to re-engage with learning and employment.",
+        websiteUrl: "https://www.pathwayscentre.ie/"
+    },
+    {
+        src: "https://res.cloudinary.com/dsa31toc5/image/upload/v1749721461/qqi_provider_2025_vrfwry.png",
+        alt: "QQI - Quality and Qualifications Ireland",
+        tooltipText: "QQI (Quality and Qualifications Ireland) is the state agency responsible for promoting the quality, integrity, and reputation of Ireland's further and higher education system. They maintain the National Framework of Qualifications (NFQ).",
+        websiteUrl: "https://www.qqi.ie/what-we-do/the-qualifications-system/national-framework-of-qualifications"
     }
 ];
 
