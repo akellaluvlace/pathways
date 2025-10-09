@@ -348,7 +348,7 @@ function Home() {
                 <Box sx={{ display: 'flex', flexDirection: {xs: 'column', sm: 'row'}, alignItems: 'center', gap: theme.spacing(2.5), p: 3, borderRadius: theme.shape.borderRadius, background: alpha(theme.palette.primary.main, 0.05), borderLeft: {xs: 'none', sm: `5px solid ${theme.palette.primary.main}`}, borderTop: {xs: `5px solid ${theme.palette.primary.main}`, sm: 'none'}, mt: 2 }}>
                    <GroupsIcon sx={{ fontSize: '3rem', color: 'primary.main' }} />
             <Typography variant="h6" sx={{ fontWeight: 400, textAlign: {xs: 'center', sm: 'left'} }}>
-             The Pathways Centre is open to current and former prisoners, their families, and members of the wider community. <strong>Our Counselling Service and Health and Fitness class are only available for enrolled students who are currently attending classes, subject to availability.</strong>
+             The Pathways Centre is open to current and former prisoners, their families, and members of the wider community. Our Counselling Service and Health and Fitness classes are only available for enrolled students who are currently attending classes, subject to availability.
             </Typography>
 
                 </Box>
