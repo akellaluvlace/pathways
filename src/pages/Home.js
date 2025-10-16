@@ -54,7 +54,7 @@ const createSafeId = (title) => {
 };
 
 export const sectionTitlesForNav = [
-    "About Us", "Our Mission", "Our Core Services", "Classes & Services",
+    "Our Sponsors", "About Us", "Our Mission", "Our Core Services", "Classes & Services",
     "Who We Welcome", "Referral Process", "Contact Us", "Testimonials",
 ];
 
@@ -171,8 +171,12 @@ function Home() {
   ];
 
   const firstSectionStyles = { 
-    ...getSectionStyle(0, { backgroundColor: theme.palette.common.white }), 
-    pt: { xs: theme.spacing(1.5), md: theme.spacing(2.5) }, 
+    ...getSectionStyle(0, {
+        backgroundColor: theme.palette.common.white,
+        borderBottom: `1px solid ${theme.palette.divider}`
+    }), 
+    pt: { xs: 5, md: 7 }, 
+    pb: { xs: 5, md: 7 },
   };
 
   const ContactDetailItem = ({ label, value, href }) => (
@@ -226,12 +230,7 @@ function Home() {
 
   return (
     <>
-      <Box
-        component="div" 
-        sx={{ 
-          pt: `20px`,
-        }} 
-      >
+      <Box component="div">
         {/* Section 1: Sponsors */}
         <Box 
             component="section" 
